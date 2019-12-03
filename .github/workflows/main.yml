@@ -45,4 +45,4 @@ jobs:
       - name: lint
         run: |
           cd ~/catkin_ws
-          catkin build --no-deps --catkin-make-args roslint
+          catkin build suii --catkin-make-args roslint

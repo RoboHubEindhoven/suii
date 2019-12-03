@@ -42,7 +42,12 @@ jobs:
           # echo "::warning `ls -l`"
           cd ..
           catkin build
-      - name: lint
+      - name: launch_check
         run: |
-          cd ~/catkin_ws
-          catkin build suii --catkin-make-args roslint
+          rosrun roslaunch roslaunch-check suii
+          rosrun roslaunch roslaunch-check suii_description
+          rosrun roslaunch roslaunch-check suii_lowlevel
+#       - name: lint
+#         run: |
+#           cd ~/catkin_ws
+#           catkin build suii --catkin-make-args roslint

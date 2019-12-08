@@ -38,14 +38,15 @@ jobs:
           source devel/setup.bash
           cd ~/catkin_ws/src
           ln -s ~/work  # $CI_SOURCE_PATH
-          # echo "::warning $CI_SOURCE_PATH"
-          # echo "::warning `ls -l`"
+          echo "::warning $CI_SOURCE_PATH"
+          echo "::warning `ls -l`"
           cd ..
           catkin build
       - name: launch_check
         run: |
           source /opt/ros/$ROS_DISTRO/setup.bash
           source ~/catkin_ws/devel/setup.bash
+          echo $ROS_PACKAGE_PATH
           rosrun roslaunch roslaunch-check ~/catkin_ws/src/suii/suii_description
           rosrun roslaunch roslaunch-check ~/catkin_ws/src/suii/suii_lowlevel
 #       - name: lint

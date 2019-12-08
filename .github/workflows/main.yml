@@ -45,6 +45,7 @@ jobs:
       - name: launch_check
         run: |
           source /opt/ros/$ROS_DISTRO/setup.bash
+          source ~/catkin_ws/devel/setup.bash
           rosrun roslaunch roslaunch-check ~/catkin_ws/src/suii/suii_description
           rosrun roslaunch roslaunch-check ~/catkin_ws/src/suii/suii_lowlevel
 #       - name: lint

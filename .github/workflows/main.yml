@@ -44,8 +44,8 @@ jobs:
           catkin build
       - name: launch_check
         run: |
-          rosrun roslaunch roslaunch-check suii_description
-          rosrun roslaunch roslaunch-check suii_lowlevel
+          rosrun roslaunch roslaunch-check ~/catkin_ws/src/suii/suii_description
+          rosrun roslaunch roslaunch-check ~/catkin_ws/src/suii/suii_lowlevel
 #       - name: lint
 #         run: |
 #           cd ~/catkin_ws

@@ -46,7 +46,7 @@ jobs:
         run: |
           source /opt/ros/$ROS_DISTRO/setup.bash
           source ~/catkin_ws/devel/setup.bash
-          echo $ROS_PACKAGE_PATH
+          echo "::warning $ROS_PACKAGE_PATH"
           rosrun roslaunch roslaunch-check ~/catkin_ws/src/suii/suii_description
           rosrun roslaunch roslaunch-check ~/catkin_ws/src/suii/suii_lowlevel
 #       - name: lint
